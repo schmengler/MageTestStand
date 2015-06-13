@@ -28,12 +28,15 @@ echo "Using build directory ${BUILDENV}"
  
 git clone https://github.com/schmengler/MageTestStand.git "${BUILDENV}"
 cp -rf "${WORKSPACE}" "${BUILDENV}/.modman/"
-${BUILDENV}/install.sh
-
 # if module came with own dependencies that were installed, use these:
 if [ -d "${WORKSPACE}/vendor" ] ; then
+  cp -f ${WORKSPACE}/composer.lock "${BUILDENV}/"
   cp -rf ${WORKSPACE}/vendor/* "${BUILDENV}/vendor/"
 fi
+if [ -d "${WORKSPACE}/.modman" ] ; then
+  cp -rf ${WORKSPACE}/.modman/* "${BUILDENV}/.modman/"
+fi
+${BUILDENV}/install.sh
  
 cd ${BUILDENV}/htdocs
 ${BUILDENV}/bin/phpunit --colors -d display_errors=1
