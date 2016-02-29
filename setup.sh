@@ -39,7 +39,7 @@ fi
 ${BUILDENV}/install.sh
  
 cd ${BUILDENV}/htdocs
-if [ -z $CODECLIMATE_REPO_TOKEN ] ; then
+if [ ! -z $CODECLIMATE_REPO_TOKEN ] ; then
   ${BUILDENV}/bin/phpunit --colors -d display_errors=1 --coverage-clover build/logs/clover.xml
   ${BUILDENV}/bin/test-reporter
 else
