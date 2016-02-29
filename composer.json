@@ -2,7 +2,8 @@
     "minimum-stability": "dev",
     "require": {
         "aoepeople/composer-installers": "*",
-        "ecomdev/ecomdev_phpunit": "dev-dev"
+        "ecomdev/ecomdev_phpunit": "dev-dev",
+		"codeclimate/php-test-reporter": "*"
     },
     "config": {
         "bin-dir": "bin"
