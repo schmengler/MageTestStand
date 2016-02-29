@@ -22,9 +22,10 @@
    </testsuite>
    <filter>
        <blacklist>
-            <directory suffix=".php">../.modman/</directory>
+            <directory suffix=".php">../.modman/Aoe_TestSetup</directory>
+            <directory suffix=".php">../.modman/ecomdev_phpunit</directory>
             <!-- Exclude Magento Core files from code coverage -->
-            <!-- <directory suffix=".php">app/code/core</directory> -->
+            <directory suffix=".php">app/code/core</directory>
             <!-- Exclude EcomDev_PHPUnit classes from code coverage -->
             <directory suffix=".php">app/code/community/EcomDev/PHPUnit</directory>
             <directory suffix=".php">lib/EcomDev/Utils</directory>
