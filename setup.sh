@@ -40,8 +40,9 @@ ${BUILDENV}/install.sh
  
 cd ${BUILDENV}/htdocs
 if [ ! -z $CODECLIMATE_REPO_TOKEN ] ; then
-  ${BUILDENV}/bin/phpunit --colors -d display_errors=1 --coverage-clover build/logs/clover.xml --coverage-text
-  ${BUILDENV}/bin/test-reporter
+  ${BUILDENV}/bin/phpunit --colors -d display_errors=1 --coverage-clover ${BUILDENV}/clover.xml --coverage-text
+  cd ${WORKSPACE}
+  ${BUILDENV}/bin/test-reporter --coverage-report=${BUILDENV}/clover.xml
 else
   ${BUILDENV}/bin/phpunit --colors -d display_errors=1
 fi
