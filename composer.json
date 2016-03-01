@@ -4,9 +4,6 @@
         "aoepeople/composer-installers": "*",
         "ecomdev/ecomdev_phpunit": "dev-dev"
     },
-    "config": {
-        "bin-dir": "bin"
-    },
     "repositories": [
         {
             "type": "vcs",

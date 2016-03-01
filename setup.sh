@@ -45,6 +45,6 @@ if [ ! -z $CODECLIMATE_REPO_TOKEN ] ; then
   composer require codeclimate/php-test-reporter --dev
   vendor/bin/test-reporter --coverage-report=${BUILDENV}/clover.xml
 else
-  ${BUILDENV}/bin/phpunit --colors -d display_errors=1
+  ${BUILDENV}/vendor/bin/phpunit --colors -d display_errors=1
 fi
 
