@@ -41,7 +41,7 @@ ${BUILDENV}/install.sh
 cd ${BUILDENV}/htdocs
 if [ ! -z $CODECLIMATE_REPO_TOKEN ] ; then
   ${BUILDENV}/bin/phpunit --colors -d display_errors=1 --coverage-clover ${BUILDENV}/clover.xml --coverage-text
-  cd ${WORKSPACE}
+  cd ${BUILDENV}/.modman/`basename ${WORKSPACE}`
   composer require codeclimate/php-test-reporter --dev
   vendor/bin/test-reporter --coverage-report=${BUILDENV}/clover.xml
 else
