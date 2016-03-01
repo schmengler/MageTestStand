@@ -22,10 +22,12 @@
    </testsuite>
    <filter>
        <whitelist>
-            <directory suffix=".php">../.modman</directory>
+           <directory suffix=".php">../.modman</directory>
            <exclude>
                 <directory suffix=".php">../.modman/Aoe_TestSetup</directory>
                 <directory suffix=".php">../.modman/ecomdev_phpunit</directory>
+				<directory suffix=".php">../.modman/*/vendor</directory>
+				<directory suffix=".php">../.modman/**/app/code/*/*/*/Test</directory>
            </exclude>  
        </whitelist>
    </filter>
