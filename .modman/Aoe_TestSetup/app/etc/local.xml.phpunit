@@ -11,6 +11,7 @@
             </connection>
          </default_setup>
       </resources>
+      <composer_vendor_path><![CDATA[{{root_dir}}/../vendor]]></composer_vendor_path>
    </global>
    <default>
       <web>
